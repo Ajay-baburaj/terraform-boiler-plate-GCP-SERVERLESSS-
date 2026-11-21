@@ -1,0 +1,48 @@
+{
+  "name": "terraform-boiler-plate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "yarn build && functions-framework --target=index",
+    "dev": "tsc && functions-framework --target=index",
+    "build": "tsc",
+    "deploy:dev": "ENVIRONMENT=dev ./build.sh",
+    "deploy:stage": "ENVIRONMENT=stage ./build.sh"
+  },
+  "dependencies": {
+    "@azure/communication-email": "^1.0.0",
+    "@google-cloud/firestore": "^7.9.0",
+    "@google-cloud/functions-framework": "^3.4.2",
+    "@google-cloud/pubsub": "^4.5.0",
+    "@google-cloud/secret-manager": "^5.6.0",
+    "@google-cloud/storage": "^7.12.0",
+    "@google-cloud/tasks": "^5.5.0",
+    "aws-jwt-verify": "^4.0.1",
+    "aws-sdk": "^2.1663.0",
+    "axios": "^1.7.2",
+    "cdktf-cli": "^0.20.8",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.1.0",
+    "morgan": "^1.10.0",
+    "node": "^18.20.6",
+    "node-cache": "^5.1.2",
+    "ramda": "^0.30.1",
+    "typescript": "^5.5.3",
+    "uuid": "^10.0.0",
+    "winston": "^3.13.1",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.14.11",
+    "@types/ramda": "^0.30.1",
+    "@types/uuid": "^10.0.0"
+  }
+}

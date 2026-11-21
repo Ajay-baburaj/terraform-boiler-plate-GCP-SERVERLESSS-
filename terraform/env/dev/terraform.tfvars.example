@@ -1,0 +1,26 @@
+# Copy to terraform.tfvars (gitignored) and fill in your own values.
+
+project_id             = "your-gcp-project-id"
+region                 = "us-east1"
+service_account_email  = "your-service-account@your-gcp-project-id.iam.gserviceaccount.com"
+stage_id               = "dev"
+vpc_connector          = "your-vpc-connector-name"
+
+# Optional: override the generic sample API Gateway spec with your own
+# openapi_spec_path = "../../my-api-config.yaml.tpl"
+
+# Example of defining your own functions, topics, indexes, jobs and queues.
+# All of these default to empty, so the stack deploys with zero
+# application-specific resources until you populate them.
+#
+# http_functions = {
+#   helloFunction = {
+#     name        = "hello"
+#     description = "Example HTTP function"
+#     entry_point = "hello"
+#   }
+# }
+#
+# topics = {
+#   example_topic = "example-topic"
+# }
